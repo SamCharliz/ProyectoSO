@@ -1,0 +1,52 @@
+#  Monitor de Sistema en Tiempo Real (CLI)
+
+Este proyecto es una herramienta de monitoreo de recursos del sistema de alto rendimiento desarrollada en Python. Utiliza una Interfaz de Usuario Textual (TUI) para visualizar métricas de CPU, Memoria, Disco y Red en tiempo real directamente en la terminal, sin necesidad de entorno gráfico.
+
+##  Características
+
+* **Monitoreo en Tiempo Real:** Actualización fluida (0.5s) de métricas sin parpadeos (flickering).
+* **Visualización de Núcleos:** Gráficos de barra individuales para cada núcleo de la CPU.
+* **Top Procesos:** Lista dinámica de los procesos que más consumen recursos.
+* **Sistema de Alertas:** Indicadores visuales (ROJO) y registro en log cuando la CPU supera el umbral definido.
+* **Persistencia:** Generación automática de `sistema_alertas.log` para auditoría.
+
+##  Requisitos Previos
+
+* Python 3.10 o superior.
+* Sistemas Operativos: Linux, macOS o Windows.
+
+##  Instalación y Configuración
+
+Siga estos pasos para configurar el entorno de ejecución de manera aislada.
+Crear un Entorno Virtual
+Es recomendable usar un entorno virtual para no instalar librerías en el sistema global. Ubícar en la carpeta del proyecto y ejecutar:
+
+En Linux / macOS:
+
+python3 -m venv venv
+
+En Windows:
+python -m venv venv
+
+3. Activar el Entorno
+Una vez creado, se debe activar. Se aparecera (venv) al inicio de la terminal.
+
+En Linux / macOS:
+
+source venv/bin/activate
+En Windows (PowerShell):
+
+
+.\venv\Scripts\Activate
+
+(Nota: Si Windows prohíbe la ejecución de scripts, abrir PowerShell como Administrador y ejecutar: Set-ExecutionPolicy RemoteSigned).
+
+4. Instalar Dependencias
+Con el entorno activo, instalar las librerías necesarias (rich y psutil) automáticamente usando el archivo de requerimientos:
+
+pip install -r requirements.txt
+
+### 1. Clonar o descargar el proyecto
+Ubicarse en la carpeta raíz del proyecto:
+
+cd Monitor-Sistema-Avanzado
